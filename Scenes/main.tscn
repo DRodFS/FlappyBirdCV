@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://d230kehuk6i00"]
 
-[ext_resource type="PackedScene" uid="uid://clfi1bsrb2fsm" path="res://bird.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://clfi1bsrb2fsm" path="res://Scenes/bird.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bwf5i0qyei8n0" path="res://Assets/background-day.png" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bhpql1wpg4bb2" path="res://Scenes/pipe_spawner.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://bacxjfl4hrois" path="res://Scenes/ground.tscn" id="3_8gbba"]
 
 [node name="main" type="Node2D" unique_id=371808196]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=418875388]
 texture = ExtResource("2_bo1nx")
 
-[node name="Bird" parent="." unique_id=1099330897 instance=ExtResource("1_jjgbg")]
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=677743028]
+
+[node name="PipeSpawner" parent="." unique_id=1026936649 instance=ExtResource("2_jjvhh")]
+
+[node name="Ground" parent="." unique_id=235786826 instance=ExtResource("3_8gbba")]
+position = Vector2(24, 200)
+
+[node name="Bird" parent="." unique_id=1099330897 instance=ExtResource("1_jjgbg")]
